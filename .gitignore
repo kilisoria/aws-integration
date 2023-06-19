@@ -1,0 +1,8 @@
+node_modules
+
+build
+
+# ENV
+.env
+
+.DS_Store
