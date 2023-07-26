@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const moviesRouter = require('./routes/movies');
+const cognitoRouter = require('./routes/cognito');
 
 var app = express();
 
@@ -23,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/dynamo-db', moviesRouter);
+app.use('/cognito', cognitoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
