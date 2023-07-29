@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "api": {
+      "bayhealth": [
+        "Query",
+        "Mutation",
+        "Subscription"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

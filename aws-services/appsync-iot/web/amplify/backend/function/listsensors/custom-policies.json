@@ -1,0 +1,6 @@
+[
+  {
+    "Action": ["iot:SearchIndex"],
+    "Resource": ["arn:aws:iot:*:*:*"]
+  }
+]
