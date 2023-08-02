@@ -1,5 +1,5 @@
 {
-  "name": "lambda-01",
+  "name": "lambda-02",
   "version": "1.0.0",
   "description": "",
   "main": "handler.js",
@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "validator": "^13.9.0"
+    "lodash": "^4.17.21"
   }
 }
