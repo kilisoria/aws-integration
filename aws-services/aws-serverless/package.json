@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install:lambda-01": "cd lambda-01 && npm install",
+    "install:lambda-02": "cd lambda-02 && npm install",
+    "prepare": "postinstall",
+    "postinstall": "run-p install:*"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +16,7 @@
     "serverless-offline": "^12.0.4"
   },
   "dependencies": {
+    "is-odd": "^3.0.1",
     "postinstall": "^0.8.0"
   }
 }
