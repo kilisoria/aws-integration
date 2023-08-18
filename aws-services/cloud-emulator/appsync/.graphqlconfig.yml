@@ -1,0 +1,15 @@
+projects:
+  appsyncapi:
+    schemaPath: amplify/backend/api/appsyncapi/build/schema.graphql
+    includes:
+      - graphql-api/graphql/**/*.ts
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: typescript
+        generatedFileName: graphql-api/API.ts
+        docsFilePath: graphql-api/graphql
+extensions:
+  amplify:
+    version: 3
