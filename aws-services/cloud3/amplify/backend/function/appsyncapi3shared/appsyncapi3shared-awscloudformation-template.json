@@ -1,0 +1,74 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "{\"createdOn\":\"Mac\",\"createdBy\":\"Amplify\",\"createdWith\":\"12.2.5\",\"stackType\":\"function-LambdaLayer\",\"metadata\":{}}",
+  "Parameters": {
+    "env": {
+      "Type": "String"
+    },
+    "deploymentBucketName": {
+      "Type": "String"
+    },
+    "s3Key": {
+      "Type": "String"
+    },
+    "description": {
+      "Type": "String",
+      "Default": ""
+    },
+    "runtimes": {
+      "Type": "List<String>"
+    }
+  },
+  "Resources": {
+    "LambdaLayerVersionc9022e65": {
+      "Type": "AWS::Lambda::LayerVersion",
+      "Properties": {
+        "CompatibleRuntimes": {
+          "Ref": "runtimes"
+        },
+        "Content": {
+          "S3Bucket": {
+            "Ref": "deploymentBucketName"
+          },
+          "S3Key": {
+            "Ref": "s3Key"
+          }
+        },
+        "Description": {
+          "Ref": "description"
+        },
+        "LayerName": {
+          "Fn::Sub": [
+            "appsyncapi3shared-${env}",
+            {
+              "env": {
+                "Ref": "env"
+              }
+            }
+          ]
+        }
+      },
+      "DeletionPolicy": "Delete",
+      "UpdateReplacePolicy": "Retain"
+    },
+    "LambdaLayerPermissionPrivatec9022e65": {
+      "Type": "AWS::Lambda::LayerVersionPermission",
+      "Properties": {
+        "Action": "lambda:GetLayerVersion",
+        "LayerVersionArn": {
+          "Ref": "LambdaLayerVersionc9022e65"
+        },
+        "Principal": {
+          "Ref": "AWS::AccountId"
+        }
+      }
+    }
+  },
+  "Outputs": {
+    "Arn": {
+      "Value": {
+        "Ref": "LambdaLayerVersionc9022e65"
+      }
+    }
+  }
+}

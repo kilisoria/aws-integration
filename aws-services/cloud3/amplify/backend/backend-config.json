@@ -1,0 +1,100 @@
+{
+  "api": {
+    "appsyncapi3": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "auth": {
+    "appsyncapi3e0790f52": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "appsyncapi3shared": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "LambdaLayer"
+    },
+    "ffffff": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "thisIsDiferent": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_appsyncapi3shared_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "appsyncapi3shared"
+        }
+      ]
+    },
+    "AMPLIFY_function_appsyncapi3shared_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "appsyncapi3shared"
+        }
+      ]
+    },
+    "AMPLIFY_function_thisIsDiferent_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "thisIsDiferent"
+        }
+      ]
+    },
+    "AMPLIFY_function_thisIsDiferent_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "thisIsDiferent"
+        }
+      ]
+    }
+  }
+}

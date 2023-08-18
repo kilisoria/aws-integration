@@ -1,6 +1,6 @@
 projects:
   appsyncamplify:
-    schemaPath: amplify/backend/api/appsyncamplify/build/schema.graphql
+    schemaPath: amplify/backend/api/appsyncapi/schema.graphql
     includes:
       - src/graphql/**/*.ts
     excludes:
