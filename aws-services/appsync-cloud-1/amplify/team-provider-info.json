@@ -1,0 +1,38 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-appsynccloud1-dev-194132-authRole",
+      "UnauthRoleArn": "arn:aws:iam::249007541038:role/amplify-appsynccloud1-dev-194132-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::249007541038:role/amplify-appsynccloud1-dev-194132-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-appsynccloud1-dev-194132-deployment",
+      "UnauthRoleName": "amplify-appsynccloud1-dev-194132-unauthRole",
+      "StackName": "amplify-appsynccloud1-dev-194132",
+      "StackId": "arn:aws:cloudformation:us-east-1:249007541038:stack/amplify-appsynccloud1-dev-194132/375023e0-4206-11ee-adc7-12b287eedf6d",
+      "AmplifyAppId": "d3g96jkrzaf6ly"
+    },
+    "categories": {
+      "api": {
+        "appsynccloud1": {}
+      },
+      "function": {
+        "function1": {
+          "deploymentBucketName": "amplify-appsynccloud1-dev-194132-deployment",
+          "s3Key": "amplify-builds/function1-354d7752576854687868-build.zip"
+        },
+        "function2": {
+          "deploymentBucketName": "amplify-appsynccloud1-dev-194132-deployment",
+          "s3Key": "amplify-builds/function2-444734304a357944794e-build.zip"
+        },
+        "function3": {
+          "deploymentBucketName": "amplify-appsynccloud1-dev-194132-deployment",
+          "s3Key": "amplify-builds/function3-5748324438624b724a78-build.zip"
+        },
+        "function4": {
+          "deploymentBucketName": "amplify-appsynccloud1-dev-194132-deployment",
+          "s3Key": "amplify-builds/function4-4155694e454e4b795443-build.zip"
+        }
+      }
+    }
+  }
+}

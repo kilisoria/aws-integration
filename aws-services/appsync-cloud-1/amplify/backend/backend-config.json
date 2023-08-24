@@ -1,0 +1,118 @@
+{
+  "api": {
+    "appsynccloud1": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "function": {
+    "function1": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "function2": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput"
+          ],
+          "category": "api",
+          "resourceName": "appsynccloud1"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "function3": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "function4": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_function1_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "function1"
+        }
+      ]
+    },
+    "AMPLIFY_function_function1_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "function1"
+        }
+      ]
+    },
+    "AMPLIFY_function_function2_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "function2"
+        }
+      ]
+    },
+    "AMPLIFY_function_function2_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "function2"
+        }
+      ]
+    },
+    "AMPLIFY_function_function3_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "function3"
+        }
+      ]
+    },
+    "AMPLIFY_function_function3_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "function3"
+        }
+      ]
+    },
+    "AMPLIFY_function_function4_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "function4"
+        }
+      ]
+    },
+    "AMPLIFY_function_function4_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "function4"
+        }
+      ]
+    }
+  }
+}
