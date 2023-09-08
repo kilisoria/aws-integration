@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "@aws-amplify/cli": "^12.2.5"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1453.0"
   }
 }
