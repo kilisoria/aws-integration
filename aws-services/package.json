@@ -4,7 +4,6 @@
   "description": "This is a project to play and test all things around the AWS world.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "cristiansoria@gmail.com",
   "license": "ISC",
