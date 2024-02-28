@@ -10,12 +10,29 @@ import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
  *
  */
 
+const TEAMS = [
+    'San Fernando',
+    'River',
+    'SIC',
+    'Banco Provincia',
+    'San Lorenzo',
+    'Velez',
+    'Lomas',
+    'Arquitectura',
+    'Quilmes',
+    'Santa Barbara',
+    'GEBA',
+    'Ciudad',
+    'Italiano',
+    'Liceo Naval'
+]
+
 export const lambdaHandler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
     try {
         return {
             statusCode: 200,
             body: JSON.stringify({
-                message: 'hello world',
+                data: TEAMS,
             }),
         };
     } catch (err) {
