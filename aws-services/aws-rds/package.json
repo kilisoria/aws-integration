@@ -11,7 +11,7 @@
     "compile": "tsc",
     "test": "npm run compile && npm run unit",
     "create:db:test": "aws rds create-db-instance --db-instance-identifier hockeyMetroTestDb --engine mySql --db-instance-class db.t4g.micro --master-username admin --master-user-password admin123456# --allocated-storage 10",
-    "create:db:sbox": "aws rds create-db-instance --db-instance-identifier hockeyMetroSboxDb --engine mySql --db-instance-class db.t4g.micro --master-username admin --master-user-password admin123456# --allocated-storage 10"
+    "create:db:sbox": "aws rds create-db-instance --db-instance-identifier hockeyMetroSboxDb --engine mySql --db-instance-class db.t4g.micro --master-username admin --master-user-password admin-sbox123456# --allocated-storage 10"
   },
   "dependencies": {
     "esbuild": "^0.14.14"
