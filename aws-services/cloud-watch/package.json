@@ -1,7 +1,7 @@
 {
   "name": "cloud-watch",
   "version": "1.0.0",
-  "description": "Main cloudwatch integration to test project, features, tracing, etc",
+  "description": "Main cloudwatch integration to test project, app, features, tracing, etc",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
