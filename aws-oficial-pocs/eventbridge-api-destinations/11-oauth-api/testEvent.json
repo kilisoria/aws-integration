@@ -1,8 +1,0 @@
-[
-    {
-        "DetailType": "MyTestMessage",
-        "EventBusName": "ExternalOAuthEventBus",
-        "Source": "MyTestApp",
-        "Detail": "{\"event\":\"Payment success\"}"
-    }
-  ]

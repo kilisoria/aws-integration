@@ -1,8 +1,0 @@
-type Response {
-  MessageId: String!
-  SequenceNumber: String
-}
-
-type Query {
-  publish(from: String, message: String): Response
-}

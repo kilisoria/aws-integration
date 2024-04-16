@@ -1,3 +1,0 @@
-name: alb-lambda-pulumi-go
-runtime: go
-description: A minimal AWS Pulumi YAML program
