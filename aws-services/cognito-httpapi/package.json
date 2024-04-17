@@ -1,0 +1,11 @@
+{
+  "name": "cognito-httpapi",
+  "version": "1.0.0",
+  "description": "The SAM template deploys a nested stack with authentication configured using Cognito. It also deploys an HTTP API configured with a JWT authorizer based on the Cognito configuration and a Lambda function on a secure route.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
