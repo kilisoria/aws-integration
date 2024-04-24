@@ -1,7 +1,7 @@
 {
   "name": "aws-services",
   "version": "3.0.0",
-  "description": "This is a project to play and test all things around the AWS.",
+  "description": "This is a project to play and test all things around the AWS cloud provider.",
   "main": "index.js",
   "scripts": {
   },
